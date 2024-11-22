@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.custom-carta{
+    margin: 0 auto;
+}
+
+
+#Lista {
+    padding: 0;
+    margin: 0;
+    list-style-type: decimal; /* Cambiar a numeros */
+    font-size: 18px;
+    list-style-position: inside; /* Mueve los nuumeros dentro del contenedor */
+}
+
+div>h1{
+    font-size: 30px;
+}
+
+.custom-formulario{
+  display: block;
+  background-color: lightskyblue;
+  padding: 5%;
+  width: 100%;
+}
+
+#btnAgregar{
+    margin-top: 10px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    background-color: #eeee;
+    
+    
+}
+
+div>h1{
+    font-size: 15px;
+}
+
+.grupo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    list-style-type: none;
+    flex-wrap: wrap; 
+}
+
+/* .grupo li {
+    flex: 1 1 30%; 
+    margin: 5px;
+} */
+
+.header {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.header span {
+    text-align: center;
+}
+
+.gastos-list {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gastos-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.gastos-header span {
+    flex: 1;
+    text-align: center;
+}
+
+.gastos-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.gastos-list li:last-child {
+    border-bottom: none; /* Eliminar el borde en el último elemento */
+}
+
+.gastos-list li span {
+    flex: 1;
+    text-align: center;
+}
+
+.gastos-list li:nth-child(odd) {
+    background-color: #f1f1f1; /* Color alternativo para filas impares */
+}
+
+.gastos-list li:nth-child(even) {
+    background-color: #ffffff; /* Color alternativo para filas pares */
+}
