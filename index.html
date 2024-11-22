@@ -21,6 +21,7 @@
             <div class="card">
                 <label for="tipo">Seleccione un tipo:</label>
                 <select id="tipo" name="tipo">
+                    <option value=""></option>
                     <option value="alimentacion">Alimentación</option>
                     <option value="alquiler">Alquiler</option>
                     <option value="transporte">Transporte</option>
@@ -41,26 +42,29 @@
             </div>
         
 
-            <button id="btnAgregar" type="button" onclick= "agregarLista()" >Agregar gasto</button>
+            <button id="btnAgregar" type="button" onclick= "agregarLista()" >Agregar Gasto</button>
+            <button id="btnLimpiar" type="button" onclick="limpiarInputs()">Limpiar</button>
+
     </form>
 
     <div class="gastos-container">
         <h3 class="text-center mt-3">Lista de gastos</h3>
-        <div class="gastos-header">
-            <span>Tipo</span>
-            <span>Descripción</span>
-            <span>Monto</span>
-        </div>
+        
         <ol class="gastos-list" id="lista">
-            <!-- Elementos dinámicos se agregarán aquí -->
+            
         </ol>
         
     </div> 
 
-    <div>
+    <div class="card custom-cardPor">
         <ul id="grupo"></ul>
-        <p id="mostrarSuma">Suma Total: 0.00</p>
+        <p id="mostrarSuma"></p>
+        <div id="porcentajes" class="bg mt-4">
+            
+        </div>
     </div>
+
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="/calculadora_BrandonBlanco/Fun.js"></script>

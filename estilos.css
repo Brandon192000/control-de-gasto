@@ -7,6 +7,7 @@
 
 html, body {
     height: 100%;
+    background-color: lightskyblue;
 }
 
 .custom-carta{
@@ -52,15 +53,26 @@ div>h1{
 .grupo {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    list-style-type: none;
-    flex-wrap: wrap; 
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-bottom: 10px; /* Espacio entre filas */
+    padding: 10px;
+    background-color: #f8f9fa; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    list-style: none; /* Elimina los puntos o números de las listas */
 }
 
-/* .grupo li {
-    flex: 1 1 30%; 
-    margin: 5px;
-} */
+.grupo span {
+    flex: 1; /* Cada span ocupa el mismo espacio */
+    text-align: center; /* Centra el texto */
+}
+
+.grupo button {
+    flex: 0; /* Evita que el botón se expanda */
+    margin-left: 10px; /* Espacio entre el botón y el último texto */
+}
+
 
 .header {
     font-weight: bold;
@@ -75,7 +87,7 @@ div>h1{
 
 .gastos-list {
     margin-top: 20px;
-    padding: 0;
+    padding: 10px 10px;
     list-style: none;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -100,9 +112,12 @@ div>h1{
 
 .gastos-list li {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    margin: 10px;
+    margin-left: 16rem;
+    
 }
 
 .gastos-list li:last-child {
@@ -120,4 +135,92 @@ div>h1{
 
 .gastos-list li:nth-child(even) {
     background-color: #ffffff; /* Color alternativo para filas pares */
+}
+
+button{
+    padding: 2px 5px;
+    display: inline-flex;
+    margin: 5px;
+    background-color: rgba(24, 136, 205, 0.586);
+}
+
+
+
+.custom-cardPor{
+    padding: 10px 10px;
+}
+
+@media (max-width: 768px) {
+    /* Ajustar contenedor general */
+    .gastos-list {
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .card{
+        padding: 10px 10px;
+        margin: 20px;
+    }
+    .gastos-container{
+        margin: 10px;
+    }
+    button{
+        
+        margin-left: 80px;
+
+    }
+
+    #btnLimpiar{
+        margin-left: 0px;
+    }
+
+    #mostrarSuma{
+        margin-left: 0.6rem;
+    }
+
+    /* Ajustar cada grupo (li) */
+    .gastos-list li {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: flex-start; /* Alinea elementos al inicio */
+        padding: 15px;
+        margin-left: 0; /* Quitar margen adicional */
+    }
+
+    /* Ajustar los spans dentro de cada grupo */
+    .gastos-list li span {
+        flex: none; /* Quitar distribución de espacio */
+        text-align: left; /* Alineación de texto a la izquierda */
+        margin-bottom: 5px; /* Espacio entre filas */
+    }
+
+    /* Botón de eliminar */
+    .gastos-list li button {
+        align-self: flex-end; /* Mueve el botón hacia la derecha */
+        margin-top: 10px; /* Añadir espacio encima */
+    }
+
+    /* Ajustar cabecera */
+    .gastos-header {
+        flex-direction: column; /* Cambia la cabecera a diseño vertical */
+        text-align: left;
+    }
+
+    .gastos-header span {
+        margin-bottom: 10px; /* Espaciado entre columnas */
+    }
+
+    .grupo {
+        flex-direction: column; /* Cambiar a diseño vertical */
+        align-items: flex-start; /* Alinear elementos al inicio */
+    }
+
+    .grupo li {
+        flex: none; /* No permitir que los elementos se expandan */
+        text-align: left; /* Alinear texto a la izquierda */
+        margin-bottom: 5px; /* Espaciado entre filas */
+    }
+
+    .grupo button {
+        align-self: flex-end; /* Botón alineado a la derecha */
+        margin-top: 10px; /* Añadir espacio superior */
+    }
 }
