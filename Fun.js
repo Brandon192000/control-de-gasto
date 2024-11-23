@@ -59,7 +59,7 @@ function agregarLista() {
     // Agrega el monto a la suma total
     actualizarSuma(monto, "agregar");
 
-    // Crear el botón "Eliminar"
+    // Crear el btnn "Eliminar"
     let botonEliminar = document.createElement("button");
     botonEliminar.textContent = "Eliminar";
     botonEliminar.classList.add("btn", "btn-danger", "btn-sm", "ms-3");
@@ -101,7 +101,7 @@ function actualizarSuma(monto, accion) {
 
 function mostrarPorcentajes() {
     const porcentajeDiv = document.getElementById("porcentajes");
-    porcentajeDiv.innerHTML = ""; // Limpia el contenido anterior
+    porcentajeDiv.innerHTML = ""; 
 
     for (let categoria in gastosPorCategoria) {
         let porcentaje = (gastosPorCategoria[categoria] / sumaTotal) * 100 || 0; /* aqui agarro el objeto especifico y cuantas veces fue seleecionado lo divido por la sumatotal y lo multiplico por 100 para que se haga porciento y con el 0 lo que hago es que si el resultado no es un numero valido entonces se establece como 0 */
